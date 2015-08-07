@@ -23,25 +23,25 @@ class BitcoinTransaction(models.Model):
     """
     _name = 'bitcoin.transaction'
 
-    _rec_name = 
+    _rec_name = 'price'
     # bitpay api (2.3.3) returns a unicode string
     btc_due = fields.Float(compute='_compute_transaction')
-    btc_paid
-    btc_price
-    currency
-    current_time
-    exchange_rate
-    exception_status
-    expriation_time
-    transaction_id
-    invoice_time
-    payment_url_21
-    payment_url_72
-    price
-    rate
-    status 
-    token
-    url 
+    btc_paid = fields.Float(compute='_compute_transaction')
+    btc_price = fields.Float(compute='_compute_transaction')
+    currency = fields.Float(compute='_compute_transaction')
+    current_time = fields.Float(compute='_compute_transaction')
+    exchange_rate = fields.Float(compute='_compute_transaction')
+    exception_status = fields.Float(compute='_compute_transaction')
+    expriation_time = fields.Float(compute='_compute_transaction')
+    transaction_id = fields.Float(compute='_compute_transaction')
+    invoice_time = fields.Float(compute='_compute_transaction')
+    payment_url_21 = fields.Float(compute='_compute_transaction')
+    payment_url_72 = fields.Float(compute='_compute_transaction')
+    price = fields.Float()
+    rate = fields.Float(compute='_compute_transaction')
+    status = fields.Float(compute='_compute_transaction')
+    token = fields.Float(compute='_compute_transaction')
+    url = fields.Float(compute='_compute_transaction')
 
     # Realizamos la transacción. De momento sin tener en cuenta la moneda
     @api.depends('price')
